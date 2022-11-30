@@ -6,8 +6,7 @@
 //
 
 /*
- Este archivo muestra la suma de dos enteros
- 45 + 20 = 60
+ Simple Programa que muestra una fraccion
  */
 
 #import <Foundation/Foundation.h>
@@ -15,10 +14,11 @@
 int main (int argc, const char *argv[])
 {
     @autoreleasepool {
-        int number1 = 45;
-        int number2 = 20;
-        int resultado = number1 + number2;
-        NSLog(@"El valor de 45 + 20 = %i", resultado);
+        int numerator = 3;
+        int denominator = 1;
+        double result = numerator / denominator ;
+        NSLog(@"The fraction is %i/%i = %f", numerator, denominator, result);
     }
+    
     return 0;
 }
