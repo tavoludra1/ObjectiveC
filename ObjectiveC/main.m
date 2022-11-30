@@ -5,22 +5,18 @@
 //  Created by GAPT on 30/11/22.
 //
 
-/*
- Primera clase en objetive C para fracciones
- - Se declaran los metodos en la seccion de interface y
- - se implementan en la seccion implementacion
+/**
+ Segunda Clase de Fraccion para 2 fracciones
+ Creacion de Interfaces e Implementaciones
  */
 
 #import <Foundation/Foundation.h>
 
-//---- @interface section ----
 
-// Describir la clase y sus metodos
+//---- @interface section ----
 
 @interface Fraction : NSObject
 
-
-// declaracion de metodos
 -(void) print;
 -(void) setNumerator: (int) n;
 -(void) setDenominator: (int) d;
@@ -28,23 +24,14 @@
 @end
 
 
-
 //---- @implementation section ----
-
-// Describir las variables de instancia que seran almacenadas en la variable
-// Implementacion del codigo de los metodos que son declarados en la interface
-
-
 
 @implementation Fraction
 {
-    // declaracion de los miembros de clase - variables de instancia
+    // definicion de variables de instancia
     int numerator;
     int denominator;
 }
-
-
-//---- Definicion de los Metodos ----
 
 -(void) print
 {
@@ -64,26 +51,37 @@
 @end
 
 
-//---- Progam section ----
 
-int main(int argc, const char *argv[])
+//---- program section  ----
+
+int main(int argc, const char * argv[])
 {
     @autoreleasepool {
-        Fraction *myFraction; // objeto (creacion de la variable)
+        // creacion de los punteros y los objetos
+        Fraction *fraccion1 = [[Fraction alloc] init];
+        Fraction *fraccion2 = [[Fraction alloc] init];
         
-        // Creando una instancia de una fraccion
-        // esta forma es resumida
-        myFraction = [[Fraction alloc] init];
         
-        // agregar datos a la variable myFraction 1/3
-        [myFraction setNumerator: 3];
-        [myFraction setDenominator: 1];
+        // agregar datos fraccion 1 - 2/3
+        [fraccion1 setNumerator: 2];
+        [fraccion1 setDenominator: 3];
         
-        // Mostrar el resultado de la fraccion utilizando el metodo print
-        NSLog(@"El valor de myFraction es: ");
-        [myFraction print];
+        // agregar datos fraccion 2 - 5/6
+        [fraccion2 setNumerator: 5];
+        [fraccion2 setDenominator: 6];
         
+        // Mostrar datos
+        
+        NSLog(@"Primera fraccion es:");
+        [fraccion1 print];
+        
+        NSLog(@"*********************");
+        NSLog(@"Segunda fraccion es:");
+        [fraccion2 print];
     }
     
     return 0;
 }
+
+
+
