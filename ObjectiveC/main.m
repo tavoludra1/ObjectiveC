@@ -69,11 +69,11 @@
 int main(int argc, const char *argv[])
 {
     @autoreleasepool {
-        Fraction *myFraction; // objeto
+        Fraction *myFraction; // objeto (creacion de la variable)
         
         // Creando una instancia de una fraccion
-        myFraction = [Fraction alloc];
-        myFraction = [myFraction init];
+        // esta forma es resumida
+        myFraction = [[Fraction alloc] init];
         
         // agregar datos a la variable myFraction 1/3
         [myFraction setNumerator: 3];
