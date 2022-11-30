@@ -20,4 +20,5 @@ int main (int argc, const char *argv[])
         int resultado = number1 + number2;
         NSLog(@"El valor de 45 + 20 = %i", resultado);
     }
+    return 0;
 }
