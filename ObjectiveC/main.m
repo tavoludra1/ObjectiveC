@@ -6,16 +6,18 @@
 //
 
 /*
- Este archivo muestra en consola "Es nuevo codigo"
+ Este archivo muestra la suma de dos enteros
+ 45 + 20 = 60
  */
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[])
+int main (int argc, const char *argv[])
 {
     @autoreleasepool {
-        // codigo nuevo
-        NSLog(@"Es nuevo codigo"); // cambio de texto
+        int number1 = 45;
+        int number2 = 20;
+        int resultado = number1 + number2;
+        NSLog(@"El valor de 45 + 20 = %i", resultado);
     }
-    return 0;
 }
