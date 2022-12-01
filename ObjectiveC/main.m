@@ -18,8 +18,14 @@
 @interface Fraction : NSObject
 
 -(void) print;
+
+// setter
 -(void) setNumerator: (int) n;
 -(void) setDenominator: (int) d;
+
+// getter
+-(int) numerator;
+-(int) denominator;
 
 @end
 
@@ -48,6 +54,16 @@
     denominator = d;
 }
 
+-(int) numerator
+{
+    return numerator;
+}
+
+-(int) denominator
+{
+    return denominator;
+}
+
 @end
 
 
@@ -72,7 +88,7 @@ int main(int argc, const char * argv[])
         
         // Mostrar datos
         
-        NSLog(@"Primera fraccion es:");
+        NSLog(@"Primera fraccion es: %i/%i", [fraccion1 numerator], [fraccion1 denominator]);
         [fraccion1 print];
         
         NSLog(@"*********************");
